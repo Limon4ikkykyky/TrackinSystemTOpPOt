@@ -104,12 +104,8 @@
     <Compile Include="Identity\ApplicationRoleManager.cs" />
     <Compile Include="Identity\ApplicationUserManager.cs" />
     <Compile Include="Interfaces\IClientManage.cs" />
+    <Compile Include="Interfaces\IRepositories.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
-    <Compile Include="Migrations\202105030754513_FirstMigration.cs" />
-    <Compile Include="Migrations\202105030754513_FirstMigration.designer.cs">
-      <DependentUpon>202105030754513_FirstMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -117,7 +113,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Repositories\ClientManager.cs" />
-    <Compile Include="Repositories\IdentityUnitOfWork.cs" />
+    <Compile Include="Repositories\CoursesRepositories.cs" />
+    <Compile Include="Repositories\TasksRepositories.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -248,11 +245,6 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105030754513_FirstMigration.resx">
-      <DependentUpon>202105030754513_FirstMigration.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

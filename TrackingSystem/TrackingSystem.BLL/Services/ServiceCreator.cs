@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TrackingSystem.BLL.Interfaces;
+using TrackingSystem.DAL.EF;
 using TrackingSystem.DAL.Repositories;
 
 
@@ -13,7 +14,7 @@ namespace TrackingSystem.BLL.Services
     {
         public IUserService CreateUserService(string connection)
         {
-            return new UserService(new IdentityUnitOfWork(connection));
+            return new UserService(new EFUnitOfWork(connection));
         }
     }
 }

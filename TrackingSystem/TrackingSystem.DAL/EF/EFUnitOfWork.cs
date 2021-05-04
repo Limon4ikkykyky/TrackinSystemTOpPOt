@@ -15,6 +15,10 @@ namespace TrackingSystem.DAL.EF
 
     {
         private ApplicationContext db;
+        private TasksRepositories tasksRepositories;
+        private CoursesRepositories coursesRepositories;
+        //private IGenericRepository<Tasks> task;
+        //private IGenericRepository<Courses> courses;
         private ApplicationUserManager userManager;
         private ApplicationRoleManager roleManager;
         private IClientManager clientManager;
@@ -50,6 +54,44 @@ namespace TrackingSystem.DAL.EF
                 return clientManager;
             }
         }
+        public IRepository<Tasks> Task
+        {
+            get
+            {
+                if (tasksRepositories == null)
+                    tasksRepositories = new TasksRepositories(db);
+                return tasksRepositories;
+            }
+
+        }
+        public IRepository<Courses> Cours
+        {
+            get
+            {
+                if (coursesRepositories == null)
+                    coursesRepositories = new CoursesRepositories(db);
+                return coursesRepositories;
+            }
+
+        }
+        //public IGenericRepository<Tasks> Task
+        //{
+        //    get
+        //    {
+        //        if (task == null)
+        //            task = new EFGenericRepository<Tasks>(db);
+        //        return task;
+        //    }
+        //}
+        //public IGenericRepository<Courses> Course
+        //{
+        //    get
+        //    {
+        //        if (courses == null)
+        //            courses = new EFGenericRepository<Courses>(db);
+        //        return courses;
+        //    }
+        //}
         public async Task SaveAsync()
         {
             await db.SaveChangesAsync();

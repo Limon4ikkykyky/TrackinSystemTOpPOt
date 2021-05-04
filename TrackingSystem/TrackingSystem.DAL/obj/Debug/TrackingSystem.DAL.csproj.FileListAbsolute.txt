@@ -39,5 +39,3 @@ C:\Users\pirim\source\repos\TrackingSystem\TrackingSystem.DAL\bin\Debug\System.W
 C:\Users\pirim\source\repos\TrackingSystem\TrackingSystem.DAL\bin\Debug\System.Web.WebPages.xml
 C:\Users\pirim\source\repos\TrackingSystem\TrackingSystem.DAL\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\pirim\source\repos\TrackingSystem\TrackingSystem.DAL\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\pirim\source\repos\TrackingSystem\TrackingSystem.DAL\obj\Debug\TrackingSystem.DAL.Migrations.FirstMigration.resources
-C:\Users\pirim\source\repos\TrackingSystem\TrackingSystem.DAL\obj\Debug\TrackingSystem.DAL.csproj.GenerateResource.cache

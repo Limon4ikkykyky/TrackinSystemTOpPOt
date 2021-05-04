@@ -15,6 +15,7 @@ namespace IoC
         {
             Bind<IServiceCreator>().To<ServiceCreator>();
             Bind<IUserService>().To<UserService>();
+            Bind<ITasksService>().To<TasksService>();
 
         }
     }
