@@ -1,0 +1,146 @@
+﻿body {
+    background-image: url(../images/choosing-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #172238;
+    padding: 120px 0px;
+}
+
+.container-fluid {
+    min-height: 1080px;
+}
+
+#counter div {
+    height: 150px;
+}
+
+main div {
+    height: 650px;
+}
+
+.navbar {
+    background-color: #fff;
+    ;
+    padding-left: 10%;
+    padding-right: 10%;
+    border: 1px solid black;
+}
+
+footer {
+    border: 2px solid black;
+    height: 60px;
+}
+
+.tab {
+    color: white;
+}
+
+    .tab a {
+        margin-left: 10px;
+    }
+
+#myTab a {
+    font-size: 18px;
+    color: black;
+}
+
+#myTabContent div {
+    padding: 30px;
+}
+
+.panel_box {
+    border-radius: 20px;
+    background-color: white;
+    height: 500px;
+}
+
+#main_info {
+    padding: 30px;
+}
+
+.main_content {
+    background-color: white;
+    height: 500px;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #152036;
+    text-align: center;
+}
+
+    footer p {
+        margin-bottom: 0px;
+        padding: 25px 0px;
+        color: #fff;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+        footer p a,
+        footer p a:hover {
+            color: #f5a425;
+        }
+
+@media screen and (max-width: 992px) {
+    .features {
+        background-color: #0c1228;
+    }
+
+    .features-content {
+        position: relative;
+    }
+
+    .features-post {
+        border-left: 0
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .main-menu {
+        padding-right: 0 !important;
+    }
+
+    .main-header .logo {
+        line-height: 73px;
+    }
+
+    .main-menu li {
+        display: block;
+        line-height: 1;
+        margin-left: 0 !important;
+    }
+
+        .main-menu li .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            position: static;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+            .main-menu li .sub-menu li:last-child {
+                border-bottom: 1px solid rgba(250,250,250,0.25);
+            }
+}
+
+@media screen and (max-width: 950px) and (max-height: 400px) {
+    nav[role="navigation"].active {
+        max-height: calc(80px + 100vh);
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    footer p {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.25px;
+    }
+}

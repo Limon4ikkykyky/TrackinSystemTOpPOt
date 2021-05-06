@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Tasks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+
+    <div class="row" id="counter">
+        <div class="col-5">
+
+        </div>
+        <div class="col-2">
+
+        </div>
+        <div class="col-5">
+
+        </div>
+    </div>
+    <header class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">TASKS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_col" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav_col">
+            <ul class="nav" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Low</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Middle</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Advanced</a>
+                </li>
+            </ul>
+
+        </div>
+    </header>
+    <main class="row">
+        <div class="col-8" id="main_info">
+            <div class="main_content">
+                <label for="file">File progress:</label>
+
+                <progress id="file" max="100" value="70"> 0% </progress>
+                <button type="button" class="btn btn-success">Отправить ответ</button>
+                <!--Id in tab-content & id-all tab-panel-->
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <h4>
+                            Task 1<h4>
+                                <br>
+
+                                <h6>An array of real numbers with dimensions 10x10 is given. Find the sums of the elements of each row, the product of the elements of each column, and the maximum element of the main diagonal (hint: all elements for which the row number is the same as the column number).</h6>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <h4>Task 2</h4>Enter a string of arbitrary length from the keyboard and calculate the percentage of occurrence of the specified character in the string.
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <h4>Task 3</h4>
+                        In a given line of text, determine the number of words. Each word is separated from each other by a space.
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-4" id="sidebar">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="panel_box">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <!--Href-->
+
+                            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Task Low 1</a>
+                            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-peofile" aria-selected="false">Task Low 2</a>
+                            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Task Low 3</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="panel_box">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <!--Href-->
+                            <a class="nav-link active" id="v-img-home-tab" data-toggle="pill" href="#v-pills-img" role="tab" aria-controls="v-pills-img" aria-selected="true">Task Middle 1</a>
+                            <a class="nav-link" id="v-pills-photo-tab" data-toggle="pill" href="#v-pills-photo" role="tab" aria-controls="v-pills-photo" aria-selected="false">Task Middle 2</a>
+                            <a class="nav-link" id="v-pills-Pict-tab" data-toggle="pill" href="#v-pills-Pict" role="tab" aria-controls="v-pills-Pict" aria-selected="false">Task Middle 3</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="panel_box">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <!--Href-->
+                            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Task Advanced 1</a>
+                            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Task Advanced 2</a>
+                            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Task Advanced 3</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

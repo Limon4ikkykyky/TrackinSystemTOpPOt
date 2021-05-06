@@ -1,0 +1,59 @@
+﻿@model TrackingSystem.WEB.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Регистрация";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<section class="section coming-soon" data-section="section3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-xs-12">
+                <div class="continer centerIt">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="right-content">
+                <div class="top-content">
+                    <h6>Register your free account and <em>get immediate</em> access to online courses</h6>
+                </div>
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <h4>Создание новой учетной записи.</h4>
+                    <hr />
+                    @Html.ValidationSummary("", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" class="btn btn-default" value="Регистрация" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
