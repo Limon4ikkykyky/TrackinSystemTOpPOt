@@ -42,9 +42,12 @@ namespace TrackingSystem.BLL.Services
 
         public void Add(TasksDTO tasksDTO)
         {
-            var mapper = new MapperConfiguration(c => c.CreateMap<TasksDTO, Task>()).CreateMapper();
-           Task task = mapper.Map<TasksDTO, Task>(tasksDTO);
-          
+            var mapper = new MapperConfiguration(c => c.CreateMap<TasksDTO, Tasks>()).CreateMapper();
+           Tasks task = mapper.Map<TasksDTO, Tasks>(tasksDTO);
+            db.Task.Create(task);
+            db.SaveAsync();
+
+
         }
 
             public void Dispose()

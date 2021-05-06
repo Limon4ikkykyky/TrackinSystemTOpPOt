@@ -19,5 +19,6 @@ namespace TrackingSystem.DAL.Entities
         public double MaxScore { get; set; }
         [Required]
         public double MinScore { get; set; }
+        public IList<ApplicationUser> Students { get; set; }
     }
 }

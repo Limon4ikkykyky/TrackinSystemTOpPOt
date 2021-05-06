@@ -13,9 +13,11 @@ namespace IoC
     {
         public override void Load()
         {
+            Bind<IUserService>().To<UserService>();
             Bind<IServiceCreator>().To<ServiceCreator>();
             Bind<IUserService>().To<UserService>();
             Bind<ITasksService>().To<TasksService>();
+            Bind<IManagerService>().To<ManagerService>();
 
         }
     }
