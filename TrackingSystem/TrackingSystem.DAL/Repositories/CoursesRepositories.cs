@@ -22,7 +22,7 @@ namespace TrackingSystem.DAL.Repositories
         {
             return db.Cours;
         }
-        public Courses Get(int id)
+        public Courses Get(string id)
         {
             return db.Cours.Find(id);
         }

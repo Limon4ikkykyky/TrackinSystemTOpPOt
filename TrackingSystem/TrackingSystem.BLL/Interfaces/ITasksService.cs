@@ -9,13 +9,13 @@ namespace TrackingSystem.BLL.Interfaces
 {
     public interface ITasksService
     {
-        void UpdateTasks(TasksDTO task);
-        IEnumerable<TasksDTO> GetTasks();
+        Task UpdateTasks(TasksDTO task);
+       Task <IEnumerable<TasksDTO>> GetTasks();
   
-        void Add(TasksDTO tasksDTO);
+        Task Add(TasksDTO tasksDTO);
         
         
-        void DeleteTasks(int id);
+        Task DeleteTasks(int id);
        
         void Dispose();
     }

@@ -19,7 +19,7 @@ namespace TrackingSystem.DAL.Repositories
         {
             return db.Task;
         }
-        public Tasks Get(int id)
+        public Tasks Get(string id)
         {
             return db.Task.Find(id);
         }

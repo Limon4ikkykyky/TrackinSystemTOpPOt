@@ -10,7 +10,7 @@ namespace TrackingSystem.DAL.Entities
     public class Tasks
     {
         [Key]
-        public int TasksID { get; set; }
+        public string TasksID { get; set; }
         [Required]
         public string TaskName { get; set; }
         [Required]

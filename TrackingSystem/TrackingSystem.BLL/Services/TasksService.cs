@@ -21,31 +21,32 @@ namespace TrackingSystem.BLL.Services
         {
             db = uow;
         }
-        public void UpdateTasks(TasksDTO task)
+        public async Task UpdateTasks(TasksDTO task)
         {
             var mapper = new MapperConfiguration(c => c.CreateMap<TasksDTO, Tasks>()).CreateMapper();
             Tasks tasks = mapper.Map<TasksDTO, Tasks>(task);
             db.Task.Update(tasks);
-            db.SaveAsync();
+
+            await db.SaveAsync();
         }
-        public IEnumerable<TasksDTO> GetTasks()
+        public async Task< IEnumerable<TasksDTO>> GetTasks()
         {
             var mapper = new MapperConfiguration(c => c.CreateMap<Tasks, TasksDTO>()).CreateMapper();
             var tasks = mapper.Map<IEnumerable<Tasks>, IEnumerable<TasksDTO>>(db.Task.GetAll());
             return tasks;
         }
 
-        public void DeleteTasks(int id)
+        public async Task DeleteTasks(int id)
         {
             db.Task.Delete(id);
         }
 
-        public void Add(TasksDTO tasksDTO)
+        public async Task Add(TasksDTO tasksDTO)
         {
             var mapper = new MapperConfiguration(c => c.CreateMap<TasksDTO, Tasks>()).CreateMapper();
            Tasks task = mapper.Map<TasksDTO, Tasks>(tasksDTO);
             db.Task.Create(task);
-            db.SaveAsync();
+            await db.SaveAsync();
 
 
         }

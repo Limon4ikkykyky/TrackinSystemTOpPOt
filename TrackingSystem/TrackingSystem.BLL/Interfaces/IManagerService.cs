@@ -11,7 +11,7 @@ namespace TrackingSystem.BLL.Interfaces
     {
         void DeleteUser(string id);
 
-
+        void AddUserforTasks(string taskId, string userId);
 
 
     }

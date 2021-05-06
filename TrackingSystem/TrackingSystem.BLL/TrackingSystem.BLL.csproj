@@ -109,7 +109,6 @@
     <Compile Include="Services\ServiceCreator.cs" />
     <Compile Include="Services\TasksService.cs" />
     <Compile Include="Services\UserService.cs" />
-    <Compile Include="UserMapping.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

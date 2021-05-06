@@ -26,5 +26,11 @@ namespace TrackingSystem.WEB.Controllers
 
             return View();
         }
+        public ActionResult Tasks()
+        {
+           
+
+            return View();
+        }
     }
 }
