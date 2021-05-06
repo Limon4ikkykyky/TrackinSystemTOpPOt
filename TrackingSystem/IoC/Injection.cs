@@ -1,9 +1,6 @@
-﻿using Ninject.Modules;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using Ninject.Modules;
+using TrackingSystem.BLL;
 using TrackingSystem.BLL.Interfaces;
 using TrackingSystem.BLL.Services;
 
@@ -18,7 +15,16 @@ namespace IoC
             Bind<IUserService>().To<UserService>();
             Bind<ITasksService>().To<TasksService>();
             Bind<IManagerService>().To<ManagerService>();
+            Bind<IMapper>().ToMethod(ctx =>
+            {
+                return new Mapper(new MapperConfiguration(cfg =>
+                {
+                    cfg.AddProfile<Mapp>();
+
+                }));
+            });
 
         }
+     
     }
 }

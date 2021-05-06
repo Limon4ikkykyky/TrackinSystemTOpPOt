@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
@@ -83,6 +86,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Mapping\Mapping.csproj">
+      <Project>{b3348db4-3b3e-4264-a72e-124f9c91ebfa}</Project>
+      <Name>Mapping</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TrackingSystem.BLL\TrackingSystem.BLL.csproj">
       <Project>{d321d838-7229-4858-a10a-f4aad1f63201}</Project>
       <Name>TrackingSystem.BLL</Name>

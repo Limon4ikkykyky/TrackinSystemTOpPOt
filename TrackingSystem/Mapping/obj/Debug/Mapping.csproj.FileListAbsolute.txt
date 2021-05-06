@@ -1,0 +1,2 @@
+C:\Users\pirim\source\repos\trackingsystem2\TrackingSystem\Mapping\obj\Debug\Mapping.csprojAssemblyReference.cache
+C:\Users\pirim\source\repos\trackingsystem2\TrackingSystem\Mapping\obj\Debug\Mapping.csproj.CoreCompileInputs.cache

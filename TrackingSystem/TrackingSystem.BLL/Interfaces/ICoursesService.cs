@@ -9,14 +9,14 @@ namespace TrackingSystem.BLL.Interfaces
 {
     public interface ICoursesService
     {
-        void UpdateCourses(CoursesDTO courses);
-        IEnumerable<CoursesDTO> GetCourses();
+        Task UpdateCourses(CoursesDTO courses);
+        Task<IEnumerable<CoursesDTO>> GetCourses();
 
-        void Add(CoursesDTO coursesDTO);
+        Task Add(CoursesDTO coursesDTO);
 
 
-        void DeleteCourses(int id);
+        Task DeleteCourses(int id);
 
-        void Dispose();
+        Task Dispose();
     }
 }

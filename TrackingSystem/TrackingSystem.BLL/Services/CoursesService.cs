@@ -15,34 +15,37 @@ namespace TrackingSystem.BLL.Services
     public class CoursesService : ICoursesService
     {
 
-        public IUnitOfWork db { get; set; }
-        public CoursesService(EFUnitOfWork uow)
+        private readonly IUnitOfWork db;
+        private readonly IMapper mapp;
+        public CoursesService(EFUnitOfWork uow,IMapper mapper)
         {
             db = uow;
+            mapp = mapper;
+
         }
-        public void UpdateCourses(CoursesDTO courses)
+        public async Task UpdateCourses(CoursesDTO courses)
         {
-            var mapper = new MapperConfiguration(c => c.CreateMap<CoursesDTO, Courses>()).CreateMapper();
-            Courses course = mapper.Map<CoursesDTO, Courses>(courses);
+            
+            Courses course = mapp.Map<CoursesDTO, Courses>(courses);
             db.Cours.Update(course);
             db.SaveAsync();
         }
-        public IEnumerable<CoursesDTO> GetCourses()
+        public async Task<IEnumerable<CoursesDTO>> GetCourses()
         {
-            var mapper = new MapperConfiguration(c => c.CreateMap<Courses, CoursesDTO>()).CreateMapper();
-            var courses = mapper.Map<IEnumerable<Courses>, IEnumerable<CoursesDTO>>(db.Cours.GetAll());
+           
+            var courses = mapp.Map<IEnumerable<Courses>, IEnumerable<CoursesDTO>>(db.Cours.GetAll());
             return courses;
         }
 
-        public void DeleteCourses(int id)
+        public async Task DeleteCourses(int id)
         {
             db.Cours.Delete(id);
         }
 
-        public void Add(CoursesDTO coursesDTO)
+        public async Task Add(CoursesDTO coursesDTO)
         {
-            var mapper = new MapperConfiguration(c => c.CreateMap<CoursesDTO, Courses>()).CreateMapper();
-            Courses courses = mapper.Map<CoursesDTO, Courses>(coursesDTO);
+           
+            Courses courses = mapp.Map<CoursesDTO, Courses>(coursesDTO);
             db.Cours.Create(courses);
             db.SaveAsync();
 
@@ -50,7 +53,7 @@ namespace TrackingSystem.BLL.Services
 
         }
 
-        public void Dispose()
+        public async Task Dispose()
         {
             db.Dispose();
         }

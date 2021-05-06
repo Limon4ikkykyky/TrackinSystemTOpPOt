@@ -41,3 +41,5 @@ C:\Users\pirim\source\repos\TrackingSystem\IoC\obj\Debug\IoC.csproj.CoreCompileI
 C:\Users\pirim\source\repos\TrackingSystem\IoC\obj\Debug\IoC.csproj.CopyComplete
 C:\Users\pirim\source\repos\TrackingSystem\IoC\obj\Debug\IoC.dll
 C:\Users\pirim\source\repos\TrackingSystem\IoC\obj\Debug\IoC.pdb
+C:\Users\pirim\source\repos\trackingsystem2\TrackingSystem\IoC\obj\Debug\IoC.csprojAssemblyReference.cache
+C:\Users\pirim\source\repos\trackingsystem2\TrackingSystem\IoC\obj\Debug\IoC.csproj.CoreCompileInputs.cache

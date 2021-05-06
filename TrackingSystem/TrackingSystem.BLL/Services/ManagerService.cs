@@ -10,7 +10,7 @@ namespace TrackingSystem.BLL.Services
 {
     public class ManagerService : IManagerService
     {
-        public IUnitOfWork db { get; set; }
+        private readonly IUnitOfWork db ;
 
 
         public void AddUserforTasks(string taskId, string userId)

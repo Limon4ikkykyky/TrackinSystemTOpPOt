@@ -16,23 +16,26 @@ namespace TrackingSystem.BLL.Services
     {
 
 
-        public IUnitOfWork db { get; set; }
-        public TasksService(EFUnitOfWork uow)
+        private readonly IUnitOfWork db;
+        private readonly IMapper mapp;
+
+        public TasksService(EFUnitOfWork uow,IMapper mapper)
         {
             db = uow;
+            mapp = mapper;
         }
         public async Task UpdateTasks(TasksDTO task)
         {
-            var mapper = new MapperConfiguration(c => c.CreateMap<TasksDTO, Tasks>()).CreateMapper();
-            Tasks tasks = mapper.Map<TasksDTO, Tasks>(task);
+            
+            Tasks tasks = mapp.Map<TasksDTO, Tasks>(task);
             db.Task.Update(tasks);
 
             await db.SaveAsync();
         }
         public async Task< IEnumerable<TasksDTO>> GetTasks()
         {
-            var mapper = new MapperConfiguration(c => c.CreateMap<Tasks, TasksDTO>()).CreateMapper();
-            var tasks = mapper.Map<IEnumerable<Tasks>, IEnumerable<TasksDTO>>(db.Task.GetAll());
+            
+            var tasks = mapp.Map<IEnumerable<Tasks>, IEnumerable<TasksDTO>>(db.Task.GetAll());
             return tasks;
         }
 
@@ -43,8 +46,8 @@ namespace TrackingSystem.BLL.Services
 
         public async Task Add(TasksDTO tasksDTO)
         {
-            var mapper = new MapperConfiguration(c => c.CreateMap<TasksDTO, Tasks>()).CreateMapper();
-           Tasks task = mapper.Map<TasksDTO, Tasks>(tasksDTO);
+           
+           Tasks task = mapp.Map<TasksDTO, Tasks>(tasksDTO);
             db.Task.Create(task);
             await db.SaveAsync();
 

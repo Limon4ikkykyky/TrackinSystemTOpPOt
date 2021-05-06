@@ -4,9 +4,9 @@ using TrackingSystem.DAL.Entities;
 
 namespace TrackingSystem.BLL
 {
-  public  class UserMapping :Profile
+  public  class Mapp :Profile
     {
-        public UserMapping()
+        public Mapp()
         {
             CreateMap<ClientProfile, UserDTO>().ReverseMap();
             CreateMap<ApplicationUser, UserDTO>().ReverseMap();
